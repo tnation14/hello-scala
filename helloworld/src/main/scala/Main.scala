@@ -1,15 +1,20 @@
 import scala.util.parsing.combinator._
 
-
-object Main extends App {
-	val list: List[Any] = List(
-	  "Yerrr!",
-	  "a string",
-	  732,  // an integer
-	  'c',  // a character
-	  true, // a boolean value
-	  () => "an anonymous function returning a string"
+class ThingsToSayHiTo() {
+	private var _things: List[String] =  List(
+	  "Mr. Postman!",
+	  "ma (Hey ma), wassup (wassup).",
+	  "Ms. Parker!"
 	)
 
-	list.foreach(element => println("Hello " + element))
+	def getThings() = _things
+}
+
+object Main extends App {
+
+	val helloList = new ThingsToSayHiTo()
+
+	helloList.getThings().foreach(element =>
+		println("Hey " + element)
+	)
 }
