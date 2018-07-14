@@ -1,9 +1,9 @@
 version: "3"
 services:
   app:
-    image: openjdk:8-jre
-    working_dir: /usr/local/src
-    entrypoint: bash
+    image: hseeberger/scala-sbt:8u171_2.12.6_1.1.6
+    working_dir: /usr/local/src/helloworld
+    entrypoint: bash                                                               
     volumes:
       - ./:/usr/local/src/
       - ${HOME}/.sbt:/root/.sbt
