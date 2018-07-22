@@ -1,14 +1,5 @@
 import scala.util.parsing.combinator._
-
-class ThingsToSayHiTo() {
-	private var _things: List[String] =  List(
-	  "Mr. Postman!",
-	  "ma (Hey ma), wassup (wassup).",
-	  "Ms. Parker!"
-	)
-
-	def getThings() = _things
-}
+import ThingsToSayHiTo._
 
 object Main extends App {
 
